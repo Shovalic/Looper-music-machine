@@ -2,26 +2,52 @@ var tracks = [];
 function onChange(element) {
   if(element.checked == true && element.value === "track1") {
     tracks.push("audioTrack1");
+    audioTrack1.load("assets/music/_tambourine_shake_higher.mp3");
+    audioTrack1.setVolume(10);
   }else if (element.checked == true && element.value === "track2"){
     tracks.push(element.value);
+    audioTrack2.load("assets/music/bvoc.mp3");
+    audioTrack2.setVolume(10);
+    audioTrack2.play();
   }else if (element.checked == true && element.value === "track3"){
     tracks.push(element.value);
-    audioTrack3.playPause();
+    audioTrack3.setVolume(10);
+    audioTrack3.play();
   }else if (element.checked == true && element.value === "track4"){
     tracks.push(element.value);
+    audioTrack4.setVolume(10);
   }else if (element.checked == true && element.value === "track5"){
     tracks.push(element.value);
+    audioTrack5.setVolume(10);
   }else if (element.checked == true && element.value === "track6"){
     tracks.push(element.value);
+    audioTrack6.setVolume(10);
   }else if (element.checked == true && element.value === "track7"){
     tracks.push(element.value);
+    audioTrack7.setVolume(10);
   }else if (element.checked == true && element.value === "track8"){
     tracks.push(element.value);
+    audioTrack8.setVolume(10);
   }else if(element.checked == false){
+    muteSound();
     tracks.pop(element.value);
   }
-  console.log(tracks)
+  // console.log(tracks)
+  start();
 }
+
+function muteSound(){
+  audioTrack1.setVolume(0);
+  audioTrack2.setVolume(0);
+  audioTrack3.setVolume(0);
+  audioTrack4.setVolume(0);
+  audioTrack5.setVolume(0);
+  audioTrack6.setVolume(0);
+  audioTrack7.setVolume(0);
+  audioTrack8.setVolume(0);
+  onChange(element);
+}
+
 // function onChange(element) {
 //   var tracks = [];
 //   if(element.checked == true && element.value === "track1") {
@@ -38,14 +64,13 @@ function onChange(element) {
 // }
 
 // var allTracks = WaveSurfer.create({
-//     container: ".tracks",
-//     waveColor: "#eee",
-//     progressColor: "red",
-//     barWidth: 2,
-//     barRadius: 3,
-//     barHeight: 4,
-//   });
-//   audioTrack1.load("assets/music/alltracks.mp3");
+//   container: ".audio9",
+//   waveColor: "#eee",
+//   progressColor: "red",
+//   barWidth: 2,
+//   barRadius: 3,
+//   barHeight: 4,
+// });
 
 
 // Track uploads - Track1 
@@ -56,20 +81,20 @@ var audioTrack1 = WaveSurfer.create({
   width: 30,
   barWidth: 2,
   barRadius: 3,
-  barHeight: 17,
+  barHeight: 3,
 });
-audioTrack1.load("assets/music/_tambourine_shake_higher.mp3");
+// audioTrack1.load("assets/music/_tambourine_shake_higher.mp3");
 
 // Track uploads - Track2
 var audioTrack2 = WaveSurfer.create({
-    container: ".audio2",
-    waveColor: "#eee",
-    progressColor: "orange",
-    barWidth: 2,
-    barRadius: 3,
-    barHeight: 7,
-  });
-audioTrack2.load("assets/music/bvoc.mp3");
+  container: ".audio2",
+  waveColor: "#eee",
+  progressColor: "orange",
+  barWidth: 2,
+  barRadius: 3,
+  barHeight: 7,
+});
+// audioTrack2.load("assets/music/bvoc.mp3");
 
 // Track uploads - Track3
 var audioTrack3 = WaveSurfer.create({
@@ -145,47 +170,58 @@ audioTrack8.load("assets/music/uuhovoc.mp3");
 // playBtn.addEventListener("click", () => {
 //    audioTrack1.playPause(); 
 // })
+var allTracks = WaveSurfer.create({
+  container: ".audio9",
+});
+allTracks.load("assets/music/alltracks.mp3");
+// allTracks.playPause();
 
 function start() {
-    console.log(tracks)
-    audioTrack1.playPause();
-    audioTrack2.playPause();
-    audioTrack3.playPause();
-    audioTrack4.playPause();
-    playButton.style.display = "none";
-    pauseButton.style.display = "block";
+  // onChange(element);
+  // for (let i = 0; i<=tracks.length - 1; i++){
+  // (track[i+1]).playPause();
+  // }
+  console.log(tracks)
+  audioTrack1.playPause();
+  // audioTrack2.playPause();
+  // audioTrack4.playPause();
+  playButton.style.display = "none";
+  pauseButton.style.display = "block";
 }
 
 
 
 function pause() {
-    audioTrack1.playPause();
+    // audioTrack1.playPause();
     pauseButton.style.display = "none";
     playButton.style.display = "block";
 }
 
 function stop() {
-    audioTrack1.stop();
+    // audioTrack1.stop();
     // audioTrack1.load("assets/music/uuhovoc.mp3");
     playButton.style.display = "block";
     pauseButton.style.display = "none";
 }
 
 function repeat() {
-    if (typeof audioTrack1.loop == 'boolean')
-    {
-        audioTrack1.loop = true;
+    while (audioTrack1.finish()){
+      audioTrack1.playPause();
     }
-    else
-    {
-        alert(typeof audioTrack1.loop)
+    // if (typeof audioTrack1.loop == 'boolean')
+    // {
+    //     audioTrack1.loop = true;
+    // }
+    // else
+    // {
+    //     alert(typeof audioTrack1.loop)
 
-        audioTrack1.addEventListener('ended', function() {
-            this.currentTime = 0;
-            this.play();
-        }, false);
-    }
-    audioTrack1.play();
+    //     audioTrack1.addEventListener('ended', function() {
+    //         this.currentTime = 0;
+    //         this.play();
+    //     }, false);
+    // }
+    // audioTrack1.play();
     // audioTrack1.play();
     // if (audioTrack1.loop == true){
     //     start();
