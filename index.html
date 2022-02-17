@@ -26,14 +26,140 @@
     <link rel="manifest" href="/assets/logo/favicon_io/favicon.ico" />
 
     <link rel="stylesheet" href="style.css" />
+    <script defer src="https://unpkg.com/wavesurfer.js"></script>
     <script defer src="script.js"></script>
+
   </head>
   <body>
     <div class="top">
-      <img src="assets/final-logo.png"/>
+      <img src="assets/final-logo.png" />
     </div>
     <h1>PLEASE, DON'T STOP THE MUSIC</h1>
     <h2>and.. LET the SHOW BEGIN</h2>
+    <div class="main-container">
+      <!-- Track 1 Upload -->
+      <div class="rectangle-container">
+        <div class="square">
+          <label class="switch" id="red">
+            <input type="checkbox" class="checkbox" id="track1" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="audio-container">
+          <div class="track-name" id="track-name-audio1" style="background-color: red;">_tambourine_shake_higher</div>
+          <div class="audio1" id="audio1"></div>
+        </div>
+      </div>
+      <!-- Track 2 Upload -->
+      <div class="rectangle-container">
+        <div class="square">
+          <label class="switch" id="red">
+            <input type="checkbox" class="checkbox" id="track2" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="audio-container">
+          <div class="track-name" id="track-name-audio2" style="background-color: orange;">B VOC</div>
+          <div class="audio2" id="audio2"></div>
+        </div>
+      </div>
+      <!-- Track 3 Upload -->
+      <div class="rectangle-container">
+        <div class="square">
+          <label class="switch" id="red">
+            <input type="checkbox" class="checkbox" id="track3" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="audio-container">
+          <div class="track-name" id="track-name-audio3" style="background-color: rgba(255, 255, 0, 0.534);">DRUMS</div>
+          <div class="audio3" id="audio3"></div>
+        </div>
+      </div>
+      <!-- Track 4 Upload -->      
+      <div class="rectangle-container">
+        <div class="square">
+          <label class="switch" id="red">
+            <input type="checkbox" class="checkbox" id="track4" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="audio-container">
+          <div class="track-name" id="track-name-audio4" style="background-color:yellowgreen">HE HE VOC</div>
+          <div class="audio4" id="audio4"></div>
+        </div>
+      </div>
+      <!-- Track 5 Upload -->
+      <div class="rectangle-container">
+           <div class="square">
+          <label class="switch" id="red">
+            <input type="checkbox" class="checkbox" id="track5" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="audio-container">
+          <div class="track-name" id="track-name-audio5" style="background-color: skyblue;">HIGH VOC</div>
+          <div class="audio5" id="audio5"></div>
+        </div>
+      </div>
+      <!-- Track 6 Upload -->
+      <div class="rectangle-container">
+        <div class="square">
+          <label class="switch" id="red">
+            <input type="checkbox" class="checkbox" id="track6" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="audio-container">
+          <div class="track-name" id="track-name-audio6" style="background-color: blue;">JIBRISH</div>
+          <div class="audio6" id="audio6"></div>
+        </div>
+      </div>
+      <!-- Track 7 Upload -->
+      <div class="rectangle-container">
+        <div class="square">
+          <label class="switch" id="red">
+            <input type="checkbox" class="checkbox" id="track7" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="audio-container">
+          <div class="track-name" id="track-name-audio7" style="background-color: purple;">LEAD1</div>
+          <div class="audio7" id="audio7"></div>
+        </div>
+      </div>
+      <!-- Track 8 Upload -->      
+      <div class="rectangle-container">
+        <div class="square">
+          <label class="switch" id="red">
+            <input type="checkbox" class="checkbox" id="track8" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="audio-container">
+          <div class="track-name" id="track-name-audio8" style="background-color: plum;">U U HO VOC</div>
+          <div class="audio8" id="audio8"></div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="buttons">
+        <div class="button-play">
+            <img id="play" src="assets/controls/play.png" onclick="musicOn()">
+            <img id="pause" src="assets/controls/pause.png" onclick="musicOn()">
+        </div>
+        <div class="stop-btn btn">
+            <img id="stop" src="assets/controls/stop.png">
+        </div>
+        <div class="repeat-btn btn">
+            <img id="repeat" src="assets/controls/repeat.png">
+        </div>
+        <!-- <div class="mute-btn btn">
+            <img src="assets/controls/mute.png">
+        </div> -->
+    </div>
+    <div class="tracks"></div>
 
+    </div>
   </body>
 </html>

@@ -1,0 +1,48 @@
+.play-btn .btn .playing{
+    height: 0px;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    border: none;
+    margin: 0;
+    outline: none;
+  }
+  
+  
+  
+  .btn{
+    padding: 16px;
+    display: inline-block;
+  }
+  
+
+  
+  .play-btn{
+    cursor: pointer;
+  }
+  
+  .pause{
+    cursor: pointer;
+    /* position: absolute; */
+  }
+  
+  .stop-btn{
+    cursor: pointer;
+  }
+  
+  .repeat-btn{
+    cursor: pointer;
+  }
+  
+  .buttons .play-btn .pause{
+    display: none;
+  }
+  
+  .buttons .play-btn.playing .pause{
+    display: inline-block;
+  }
+  .buttons .play-btn.play-btn.playing .play{
+    /* display: none; */
+  }
+  
+  
