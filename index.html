@@ -27,7 +27,7 @@
 
     <link rel="stylesheet" href="style.css" />
     <script defer src="https://unpkg.com/wavesurfer.js"></script>
-    <script defer src="script.js"></script>
+    <script defer src="/script.js"></script>
 
   </head>
   <body>
@@ -41,7 +41,7 @@
       <div class="rectangle-container">
         <div class="square">
           <label class="switch" id="red">
-            <input type="checkbox" id="track9" value="track1" onchange="onChange(this)"/>
+            <input type="checkbox" id="track1" value="track1" onchange="onChange(this)"/>
             <span class="slider round"></span>
           </label>
         </div>
@@ -141,6 +141,7 @@
           <div class="audio8" id="audio8"></div>
         </div>
       </div>
+      <div id="note-container"></div>
     </div>
  
     <div class="buttons">
@@ -152,11 +153,12 @@
             <img id="stop" src="assets/controls/stop.png">
         </div>
         <div class="repeat-button">
-            <img id="repeat" src="assets/controls/repeat.png">
+          <label class="switch" id="red">
+            <input type="checkbox" class="checkbox" id="repeat" onclick="repeat()"/>
+            <span class="slider round" id="loop"></span>
+          </label>
+            <!-- <img id="" src="assets/controls/repeat.png"> -->
         </div>
-        <!-- <div class="mute-btn btn">
-            <img src="assets/controls/mute.png">
-        </div> -->
     </div>
     <div class="tracks"></div>
 
