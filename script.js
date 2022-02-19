@@ -132,7 +132,8 @@ function playSound(){
         }
         const myTimeout = setTimeout(refresh, 1000);
         function refresh(){
-            window.location = "/index.html";
+            window.load() = "/index.html";
+            // window.location = "https://shovalic.github.io/Looper-music-machine/";
         }
     }
 }
@@ -215,7 +216,7 @@ function stop() {
     audioTrack8.stop();
     playButton.style.display = "block";
     pauseButton.style.display = "none";
-    window.location = "/index.html";
+    window.load() = "/index.html";
 }
 
 // Track uploads - Track1 
