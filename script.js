@@ -6,12 +6,14 @@ var fifthTrack = document.getElementById("track5");
 var sixthTrack = document.getElementById("track6");
 var seventhTrack = document.getElementById("track7");
 var eighthTrack = document.getElementById("track8");
+let isPlaying = false; 
 
 function start(){
     pauseButton.style.display = "block";
     playButton.style.display = "none";
     playSound();
     repeat();
+    isPlaying = true; 
 }
 
 var tracks = [];
@@ -19,84 +21,101 @@ function playSound(){
     // Track1
     if (firstTrack.checked == false){
         tracks.push("track1");
+        audioTrack1.setVolume(0);
         pauseButton.style.display = "none";
         playButton.style.display = "block";
     }else{
         audioTrack1.play();
+        audioTrack1.setVolume(1);
         pauseButton.style.display = "block";
         playButton.style.display = "none";
     }
     // Track2
     if (secondTrack.checked == false){
         tracks.push("track2");
+        audioTrack2.setVolume(0);
         pauseButton.style.display = "none";
         playButton.style.display = "block";
 
     }else{
         audioTrack2.play();
+        audioTrack2.setVolume(1);
         pauseButton.style.display = "block";
         playButton.style.display = "none";
     }
     // Track3
     if (thirdTrack.checked == false){
         tracks.push("track1");
+        audioTrack3.setVolume(0);
         pauseButton.style.display = "none";
         playButton.style.display = "block";
     }else{
         audioTrack3.play();
+        audioTrack3.setVolume(1);
         pauseButton.style.display = "block";
         playButton.style.display = "none";
     }
     // Track4
     if (fourthTrack.checked == false){
         tracks.push("track1");
+        audioTrack4.setVolume(0);
         pauseButton.style.display = "none";
         playButton.style.display = "block";
     }else{
         audioTrack4.play();
+        audioTrack4.setVolume(1);
         pauseButton.style.display = "block";
         playButton.style.display = "none";
     }
     // Track5
     if (fifthTrack.checked == false){
         tracks.push("track1");
+        audioTrack5.setVolume(0);
         pauseButton.style.display = "none";
         playButton.style.display = "block";
     }else{
         audioTrack5.play();
+        audioTrack5.setVolume(1);
         pauseButton.style.display = "block";
         playButton.style.display = "none";
     }
     // Track6
     if (sixthTrack.checked == false){
         tracks.push("track1");
+        audioTrack6.setVolume(0);
         pauseButton.style.display = "none";
         playButton.style.display = "block";
     }else{
         audioTrack6.play();
+        audioTrack6.setVolume(1);
         pauseButton.style.display = "block";
         playButton.style.display = "none";
     }
     // Track7
     if (seventhTrack.checked == false){
         tracks.push("track1");
+        audioTrack7.setVolume(0);
         pauseButton.style.display = "none";
         playButton.style.display = "block";
     }else{
         audioTrack7.play();
+        audioTrack7.setVolume(1);
         pauseButton.style.display = "block";
         playButton.style.display = "none";
     }
     // Track8
     if (eighthTrack.checked == false){
         tracks.push("track1");
+        audioTrack8.setVolume(0);
         pauseButton.style.display = "none";
         playButton.style.display = "block";
     }else{
         audioTrack8.play();
+        audioTrack8.setVolume(1);
         pauseButton.style.display = "block";
         playButton.style.display = "none";
     }
+    
     pauseButton.style.display = "block";
     playButton.style.display = "none";
     if (tracks.length === 8){
@@ -115,7 +134,13 @@ function playSound(){
         function refresh(){
             window.location = "/index.html";
         }
-    }   
+    }
+}
+
+function onChange(){
+  if (isPlaying){
+    playSound();
+  }
 }
 
 function pause() {
