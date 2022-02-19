@@ -231,7 +231,7 @@ var audioTrack1 = WaveSurfer.create({
   barRadius: 3,
   barHeight: 17,
 });
-audioTrack1.load("assets/music/_tambourine_shake_higher.mp3");
+audioTrack1.load("assets/music/tambourineshakehigher.mp3");
 
 // Track uploads - Track2
 var audioTrack2 = WaveSurfer.create({
