@@ -12,7 +12,6 @@ function start(){
     pauseButton.style.display = "block";
     playButton.style.display = "none";
     playSound();
-    repeat();
     isPlaying = true; 
 }
 

@@ -1,4 +1,11 @@
 
+// <div class="repeat-button">
+// <label class="switch" id="red">
+//   <input type="checkbox" class="checkbox" id="repeat" onclick="repeat()"/>
+//   <span class="slider round" id="loop"></span>
+// </label>
+// </div>
+
 // function pauseSound(){
 //     if (firstTrack.checked == false){
 //         audioTrack1.setVolume(0);
