@@ -314,7 +314,7 @@ function repeat() {
     let loop = document.getElementById("repeat");
     while (loop.checked){
         if(firstTrack.checked == true){
-            audioTrack1.addEventListener('ended', () =>{
+            firstTrack.addEventListener('ended', () =>{
                 audioTrack1.play();
             })
         }   
