@@ -132,6 +132,7 @@ function playSound(){
         }
         const myTimeout = setTimeout(refresh, 1000);
         function refresh(){
+            frameNote.style.display = "none";
             window.location = "/index.html";
             window.location = "https://shovalic.github.io/Looper-music-machine/";
         }
@@ -206,18 +207,19 @@ function pause() {
 }
 
 function stop() {
-    audioTrack1.stop();
-    audioTrack2.stop();
-    audioTrack3.stop();
-    audioTrack4.stop();
-    audioTrack5.stop();
-    audioTrack6.stop();
-    audioTrack7.stop();
-    audioTrack8.stop();
-    playButton.style.display = "block";
-    pauseButton.style.display = "none";
-    window.location = "/index.html";
-    window.location = "https://shovalic.github.io/Looper-music-machine/";
+  audioTrack1.stop();
+  audioTrack2.stop();
+  audioTrack3.stop();
+  audioTrack4.stop();
+  audioTrack5.stop();
+  audioTrack6.stop();
+  audioTrack7.stop();
+  audioTrack8.stop();
+  playButton.style.display = "block";
+  pauseButton.style.display = "none";
+  playSound();
+  // window.location = "/index.html";
+  // window.location = "https://shovalic.github.io/Looper-music-machine/";
 }
 
 // Track uploads - Track1 
@@ -313,13 +315,8 @@ audioTrack8.load("assets/music/uuhovoc.mp3");
 function repeat() {
     let loop = document.getElementById("repeat");
     while (loop.checked){
-        if(firstTrack.checked == true){
-            firstTrack.addEventListener('ended', () =>{
-                audioTrack1.play();
-            })
-        }   
-    }    
-}
+    }
+  }
 
 // Create event listeners
 let playButton = document.getElementById("play");
