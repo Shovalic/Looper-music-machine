@@ -229,7 +229,7 @@ var audioTrack1 = WaveSurfer.create({
   width: 30,
   barWidth: 2,
   barRadius: 3,
-  barHeight: 17,
+  barHeight: 3,
 });
 audioTrack1.load("assets/music/tambourineshakehigher.mp3");
 
