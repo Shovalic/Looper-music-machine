@@ -217,9 +217,8 @@ function stop() {
   audioTrack8.stop();
   playButton.style.display = "block";
   pauseButton.style.display = "none";
-  playSound();
-  // window.location = "/index.html";
-  // window.location = "https://shovalic.github.io/Looper-music-machine/";
+  window.location = "/index.html";
+  window.location = "https://shovalic.github.io/Looper-music-machine/";
 }
 
 // Track uploads - Track1 
